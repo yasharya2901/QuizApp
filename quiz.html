@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="curr-ques">
+            <div class="question-num">
+                Question: <span id="question-num">1</span> / 3
+            </div>
+        </div>
+        <div id="ques" class="spacer">
+            
+        </div>
+        <div class="score-counter">
+            <div>Score</div><div id="score">0</div>
+        </div>
+    </header>
+    <div id="quiz-container" class="quiz-container">
+        <div id="question-container" class="question">
+            <div id="question" class="question-text">
+                Which HTML tag is used to define an inline style?
+            </div>
+            <div id="answer-buttons" class="answers">
+                <button id="button-1" class="btn" onclick="nextPageAndUpdateScore(1)">
+                    <span id="option-1" class="option">A</span>
+                    <span id="option-1-text" class="option-text">Choice 1</span>
+                </button>
+                <button id="button-2" class="btn" onclick="nextPageAndUpdateScore(2)">
+                    <span id="option-2" class="option">B</span>
+                    <span id="option-2-text" class="option-text">Choice 2</span>
+                </button>
+                <button id="button-3" class="btn" onclick="nextPageAndUpdateScore(3)">
+                    <span id="option-3" class="option">C</span>
+                    <span id="option-3-text" class="option-text">Choice 3</span>
+                </button>
+                <button id="button-4" class="btn" onclick="nextPageAndUpdateScore(4)">
+                    <span id="option-4" class="option">D</span>
+                    <span id="option-4-text" class="option-text">Choice 4</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="f-score" class="hide">
+        <div id="final-score"></div>
+        <button class="btn" onclick="restartQuiz()">Play Again</button>
+        <button class="btn" onclick="navigateHome()">Go Home</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
